@@ -1,0 +1,22 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg">
+	<style>
+		rect {
+			fill: black;
+		}
+
+		@media (prefers-color-scheme: dark) {
+			rect {
+				fill: white;
+			}
+		}
+	</style>
+
+	<rect x="2" y="15" width="11" height="11" />
+	<rect x="13" y="15" width="11" height="11" />
+	<rect x="13" y="37" width="11" height="11" />
+	<rect x="29" y="15" width="11" height="11" />
+	<rect x="40" y="15" width="11" height="11" />
+	<rect x="40" y="26" width="11" height="11" />
+	<rect x="40" y="37" width="11" height="11" />
+	<rect x="51" y="15" width="11" height="11" />
+</svg>
