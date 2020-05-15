@@ -1,10 +1,15 @@
 {
-	"scripts": {
-		"prebuild": "rimraf dist",
-		"build": "parcel build assets/index.html"
+	"name": "nutty-world",
+	"author": "nutty7t",
+	"private": true,
+	"dependencies": {
+		"gatsby": "^2.21.31",
+		"gatsby-plugin-purescript": "^2.0.0",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1"
 	},
 	"devDependencies": {
-		"parcel-bundler": "^1.12.4",
+		"gatsby-cli": "^2.12.21",
 		"rimraf": "^3.0.2"
 	}
 }

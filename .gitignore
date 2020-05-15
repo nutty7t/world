@@ -3,6 +3,7 @@
 /node_modules/
 /bundle/
 /output/
+/public/
 /dist/
 /.pulp-cache/
 /.psc-package/

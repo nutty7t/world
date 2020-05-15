@@ -1,25 +1,20 @@
 .PHONY: serve build deploy neocities clean
 
 serve:
-	npx parcel assets/index.html & \
-	spago bundle-app --main Main --to bundle/app.js --watch
+	yarn gatsby develop
 
-build: dist/index.html
+build: public
 
 deploy:
-	# this will rebuild dist/ and get rid of old
-	# bundles before deploying to neocities
-	yarn build
-	neocities push dist/
+	yarn rimraf public
+	yarn gatsby build
+	neocities push public
 
-dist/index.html: bundle/app.js
-	yarn build
-
-bundle/app.js: output
-	spago bundle-app --main Main --to bundle/app.js
+public:
+	yarn gatsby build
 
 output: packages.dhall spago.dhall
-	spago install
+	spago build
 
 node_modules: package.json yarn.lock
 	yarn install
@@ -27,11 +22,8 @@ node_modules: package.json yarn.lock
 neocities:
 	rm bin/neocities/Gemfile.lock
 	rm bin/neocities/gemset.nix
-	# upgrade neocities to latest version
 	(cd bin/neocities && bundix -l)
 
 clean:
-	rm -rf dist/
-	rm -rf bundle/
-	rm -rf output/
+	rm -rf public/
 	rm -rf node_modules/
