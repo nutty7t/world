@@ -8,6 +8,7 @@ build: public
 deploy:
 	yarn rimraf public
 	yarn gatsby build
+	cp public/404.html public/not_found.html
 	neocities push public
 
 public:
