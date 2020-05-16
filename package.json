@@ -6,10 +6,13 @@
 		"gatsby": "^2.21.31",
 		"gatsby-plugin-alias-imports": "^1.0.5",
 		"gatsby-plugin-purescript": "^2.0.0",
+		"gatsby-plugin-react-helmet": "^3.3.1",
 		"react": "^16.13.1",
-		"react-dom": "^16.13.1"
+		"react-dom": "^16.13.1",
+		"react-helmet": "^6.0.0"
 	},
 	"devDependencies": {
+		"@types/react-helmet": "^6.0.0",
 		"gatsby-cli": "^2.12.21",
 		"rimraf": "^3.0.2"
 	}
