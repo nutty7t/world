@@ -1,4 +1,4 @@
-.PHONY: serve build deploy neocities clean
+.PHONY: serve build deploy install neocities clean
 
 serve:
 	yarn gatsby develop
@@ -16,6 +16,8 @@ public:
 
 output: packages.dhall spago.dhall
 	spago build
+
+install: node_modules
 
 node_modules: package.json yarn.lock
 	yarn install
