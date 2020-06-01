@@ -1,0 +1,3 @@
+[submodule "src/services/zettels"]
+	path = src/services/zettels
+	url = https://github.com/nutty7t/zettels

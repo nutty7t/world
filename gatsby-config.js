@@ -8,6 +8,7 @@ module.exports = {
 				alias: {
 					"@": "src",
 					λ: "src/lambda",
+					μ: "src/services",
 				},
 				extensions: ["js", "jsx", "ts", "tsx"],
 			},
